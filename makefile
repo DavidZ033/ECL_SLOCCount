@@ -83,7 +83,8 @@ COMPILED_EXECUTABLES= \
    php_count$(EXE_SUFFIX) \
    pig_count$(EXE_SUFFIX) \
    jsp_count$(EXE_SUFFIX) \
-   ml_count$(EXE_SUFFIX)
+   ml_count$(EXE_SUFFIX) \
+   ecl_count$(EXE_SUFFIX) \
 
 EXECUTABLES= \
    ada_count \
