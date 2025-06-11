@@ -1,7 +1,8 @@
 SLOCCount README
 =================
 
-New Additions: ecl_count references the same counter used for C and is used for all files thta have the extension ".ecl" 
+New Additions: ecl_count references the same counter used for C and is used for all files that have the extension ".ecl" 
+
 There is one small bug that occurs when a block comment is used within a method similar to the following:
 
 dsTO2 := DATASET(NOFOLD(1), TRANSFORM({string value}, SELF.value := redis.GetOrLockString('timeoutTest' + (string)(1+COUNTER), server, database, password, 100/*timeout ms*/)));
