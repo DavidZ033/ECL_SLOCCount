@@ -1,6 +1,16 @@
 SLOCCount README
 =================
 
+New Additions: ecl_count references the same counter used for C and is used for all files thta have the extension ".ecl" 
+There is one small bug that occurs when a block comment is used within a method similar to the following:
+
+dsTO2 := DATASET(NOFOLD(1), TRANSFORM({string value}, SELF.value := redis.GetOrLockString('timeoutTest' + (string)(1+COUNTER), server, database, password, 100/*timeout ms*/)));
+
+This line should output as 1 SLOC but our code interprets it as 2 lines of code because of the block comment, 
+although since this method of writing code was used in only 2 of the 1 million+ SLOC in HPCC systems, we decided to ignore it. 
+
+               
+
 This directory contains "SLOCCount", a set of the programs for counting
 source lines of code (SLOC) in large software systems.
 It was developed by David A. Wheeler (dwheeler@dwheeler.com),
